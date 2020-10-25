@@ -25,7 +25,7 @@ def ChoosingGame(NoChoice):
             break
         elif NoChoice == "rps" or NoChoice == "rockpaperscissors":
             Sure = input(sure).upper()
-            if Sure == "yes":
+            if Sure == "YES":
                 print(bs)
                 RPS()
                 AnotherGame()
@@ -37,7 +37,7 @@ def ChoosingGame(NoChoice):
             break
         elif NoChoice == "guess number" or NoChoice == "guessnumber":
             Sure = input(sure).upper()
-            if Sure == "yes":
+            if Sure == "YES":
                 print(gn)
                 GUESSNUMBER()
                 AnotherGame()

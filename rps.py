@@ -1,13 +1,33 @@
+
+import random
+
+
 def RPS():
-    import random
-    print("\n          WELCOME TO ROCK - PAPER - SCISSORS! Who gets 3 points - WIN!          \n\n")
+    first_time = True
 
-    def weapones_points(p_p, c_p, player1, computer):
-        print("Player: ", player1, "Computer: ", computer)
-        print("------------->POINTS<--------------")
-        print("Player: ", p_p, " points ||| Computer: ", c_p)
-        print("-----------------------------------")
+    while True:
+        if not first_time:
+            playagain = input("Wanna play again?\n").upper()
+        else:
+            playagain = "YES"
+            first_time = False
 
+        if playagain == "YES":
+            print(
+                "\n          WELCOME TO ROCK - PAPER - SCISSORS! Who gets 3 points - WIN!          \n\n")
+            game()
+        else:
+            break
+
+
+def weapones_points(p_p, c_p, player1, computer):
+    print("Player: ", player1, "Computer: ", computer)
+    print("------------->POINTS<--------------")
+    print("Player: ", p_p, " points ||| Computer: ", c_p)
+    print("-----------------------------------")
+
+
+def game():
     rock = "ROCK"
     paper = "PAPER"
     scissors = "SCISSORS"
@@ -17,19 +37,9 @@ def RPS():
     while True:
         if p_p == 3:
             print("*******You won!*******")
-            playagain = input("Wanna play again?\n")
-            if playagain == "yes":
-                RPS()
-            else:
-                break
             break
         if c_p == 3:
             print("*******You lost!*******")
-            playagain = input("Wanna play again?\n")
-            if playagain == "yes":
-                RPS()
-            else:
-                break
             break
         player1 = input(
             "              What is your weapon? ROCK / PAPER / SCISSORS\n").upper()
