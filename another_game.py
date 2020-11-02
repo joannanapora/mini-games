@@ -5,7 +5,7 @@ from rps import RPS
 
 def AnotherGame():
     while True:
-        another_game = input("Would you like to play another game?\n")
+        another_game = input("Would you like to play another game?\n").lower()
         if another_game == "yes":
             games = input(
                 "\nYou can play:\n \n-> HANGMAN\n \n-> GUESSNUMBER\n \n-> RPS(rock/paper/scissors)\n\nWhat's your choice?\n").lower()
